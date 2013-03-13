@@ -1,4 +1,4 @@
-TITLE Add and Subtract          (AddSub.asm)
+title Add and Subtract          (add_sub.asm)
 
 ; This program adds and subtracts 32-bit integers.
 
