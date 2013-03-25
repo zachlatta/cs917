@@ -1,4 +1,4 @@
-title Draw Text Colors						(draw_text_colors.asm)
+title Draw Text Colors                  (draw_text_colors.asm)
 
 INCLUDE Irvine32.inc
 .data
@@ -12,7 +12,7 @@ main proc
     mov edx,offset string
     call WriteString
 
-	exit
+    exit
 main endp
 
 end main
