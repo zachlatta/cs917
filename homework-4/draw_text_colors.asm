@@ -6,7 +6,7 @@ string byte "This string is colored green with a black background.",0dh,0ah,0
 
 .code
 main proc
-	mov ax,green + (black * 16)
+    mov ax,green + (black * 16)
     call SetTextColor
 
     mov edx,offset string
