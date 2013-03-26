@@ -5,7 +5,6 @@ include Irvine32.inc
 
 string byte "OpenGL is a graphics API.",0dh,0ah,0
 count dword ?
-background dword 0
 
 .code
 main proc
