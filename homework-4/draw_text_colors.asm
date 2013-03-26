@@ -1,17 +1,29 @@
 title Draw Text Colors                  (draw_text_colors.asm)
 
-INCLUDE Irvine32.inc
+include Irvine32.inc
 .data
-string byte "This string is colored green with a black background.",0dh,0ah,0
+
+string byte "OpenGL is a graphics API.",0dh,0ah,0
+count dword ?
+background dword 0
 
 .code
 main proc
-	mov ax,green + (black * 16)
+    call Clrscr
+
+    mov ecx, 4
+
+color_loop:
+    mov count, ecx
+    mov ecx, count
+    mov eax, count + (black * 16)
     call SetTextColor
 
-    mov edx,offset string
+    mov edx, offset string
     call WriteString
+    loop color_loop
 
+    call Crlf
     exit
 main endp
 
